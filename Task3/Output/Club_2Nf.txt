@@ -1,0 +1,8 @@
++--------+-------------+----------+------------+
+| ClubID | ClubName    | ClubRoom | ClubMentor |
++--------+-------------+----------+------------+
+|      1 | Music Club  | R101     | Mr. Raman  |
+|      2 | Sports Club | R202     | Ms. Sita   |
+|      3 | Drama Club  | R303     | Mr. Kiran  |
+|      4 | Coding Club | Lab1     | Mr. Anil   |
++--------+-------------+----------+------------+
