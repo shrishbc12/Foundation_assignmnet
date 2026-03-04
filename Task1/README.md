@@ -80,7 +80,7 @@ docker ps
 :: Verify file is created
 docker exec server cat myfile.txt
 
-## 🚀 Four Scripts Overview
+## Four Scripts Overview
 
 | # | Script Name | Language | Purpose |
 |---|-------------|----------|---------|
@@ -91,7 +91,7 @@ docker exec server cat myfile.txt
 
 ---
 
-## 📜 Script 1: ASCII_Encoding.ps1
+## Script 1: ASCII_Encoding.ps1
 
 ### Purpose
 Demonstrates ASCII encoding standard for text data representation.
