@@ -1,11 +1,17 @@
 # Task 2 – Computational Complexity Analysis (P vs NP)
 
+---
+
 ## Overview
 This repository demonstrates computational complexity concepts through a **classroom seating problem**, illustrating the difference between P and NP problems and comparing brute force vs heuristic approaches.
+
+---
 
 **Problem:** Arrange students in one row such that:
 1. Friends are NOT sitting next to each other
 2. Students from the same city are NOT sitting next to each other
+
+---
 
 ## Repository Structure
 ```
@@ -23,7 +29,7 @@ task2/
     ├── Brute-force.py    # Python script for brute force approach
     └── Heuristic.py      # Python script for heuristic approach
 ```
-
+---
 
 ## Understanding P vs NP
 
@@ -33,6 +39,8 @@ task2/
 |-------|------------|---------|
 | **P (Polynomial time)** | Problems that can be SOLVED quickly | Sorting a list, searching a file |
 | **NP (Nondeterministic Polynomial time)** | Problems whose answers can be CHECKED quickly, but solving may take exponential time | Sudoku, classroom seating |
+
+---
 
 ### Classroom Seating Scenario
 
@@ -48,11 +56,15 @@ task2/
 - For 10 students: 10! = 3,628,800 arrangements
 - For 15 students: 15! = 1.3 trillion arrangements
 
+---
+
 ## Understanding the Problem
 | Approach | How it works | Time |
 |----------|--------------|---------|
 | **Brute Force** | Try ALL possible arrangements (n!) | O(n!) - Impossible for large n |
 | **Heuristic** | Use smart rules to place students | O(n²) - Fast even for large n|
+
+---
 
 ## How to Run
 ### Prerequisites
@@ -71,6 +83,8 @@ cd Scripts
 python Heuristic.py
 ```
 
+---
+
 ## Output
 **Brute Force (for 4 students)**
 ![brute force seating](Images/brute-force-output.png)
@@ -78,6 +92,7 @@ python Heuristic.py
 **Heuristic (for 4 students)**
 ![Heuristic seating](Images/heuristic-output.png)
 
+---
 
 ## Performance Comparsion
 |# Students| Brute Force Checks| Heuristic Steps | Brute force Runtime | Heuristic Runtime |
@@ -86,3 +101,16 @@ python Heuristic.py
 |   10	  |     3.6 MILLION	   |       10        |     3.6 seconds     |  0.5 milliseconds |
 |   15	  |     1.3 TRILLION   |       15        |     15 days         |  0.8 milliseconds |
 |   20	  |     2.4 QUINTILLION|	   20        |     77,000 years    |   1 milliseconds  |
+
+---
+
+## License
+This project is licensed under the MIT License - see the [root LICENSE file](../LICENSE) for details.
+
+---
+## References
+Academic Books
+- Arora, S., & Barak, B. (2009). Computational complexity: A modern approach. Cambridge University Press.
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). Introduction to algorithms (4th ed.). MIT Press.
+- Sipser, M. (2012). Introduction to the theory of computation (3rd ed.). Cengage Learning.
+
