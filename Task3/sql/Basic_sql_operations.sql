@@ -1,7 +1,7 @@
 
 -- Inert a new student into the Student table
 INSERT INTO Student (StudentID, StudentName, Email) VALUES
-(0, 'Rita', 'rita@email.com'),
+(8, 'Rita', 'rita@email.com'),
 (1, 'Asha', 'asha@email.com'),
 (2, 'Bikash', 'bikash@email.com'),
 (3, 'Nisha', 'nisha@email.com'),
