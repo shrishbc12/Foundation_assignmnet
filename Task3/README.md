@@ -173,7 +173,7 @@ Output files:
 Output file: [`Output/basic_sql_operation_output.txt`](Output/basic_sql_operation_output.txt)
 
 Includes:
-- NSERT (adding new clubs and students)
+- INSERT (adding new clubs and students)
 - SELECT (viewing all records)
 
 ### JOIN Operation
@@ -184,7 +184,7 @@ Output file: [`Output/join_operation_output.txt`](Output/join_operation_output.t
 SELECT s.StudentName, c.ClubName, m.JoinDate
 FROM Membership m
 JOIN Student s ON m.StudentID = s.StudentID
-JOIN Club c ON m.ClubID = c.ClubID;
+JOIN Club c ON m.ClubID = c.ClubID
 ORDER BY s.StudentName, m.JoinDate;
 ```
 ### Why JOIN Operations Are Necessary
@@ -270,6 +270,12 @@ WHERE c.ClubName = 'Sports Club';
 |EXCEPT	|-	|Students in first but not second	|Asha, Bikash, Nisha, Suman|
 
 ---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+--
 
 ## References
 - Alexander, S. (2024). What is a database? TechTarget.
