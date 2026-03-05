@@ -145,6 +145,13 @@ Output files:
 
 **Solution:** Add ClubID as primary key
 
+### Key Notes
+| Normal Form|	Requirement|	How We Achieved|
+|------------|-------------|-----------------|
+|1NF|	Atomic values|	Each cell has single value|
+|2NF| No partial dependencies|	Split Student and Club tables|
+|3NF|	No transitive dependencies|	Added ClubID primary key|
+
 ## Entity Relationship Diagram
 
 ![ER Diagram](Images/er-diagram.png)
