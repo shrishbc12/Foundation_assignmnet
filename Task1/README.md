@@ -54,6 +54,8 @@ Task1/
 - Replaces unsafe characters with % followed by hex digits
 - **Use Case**: Web forms, HTTP requests
 
+---
+
 ## Protocol Integration
 
 | Protocol | Role | Encoding Integration |
@@ -63,6 +65,8 @@ Task1/
 | **SMTP** | Email transmission | Base64 for attachments |
 | **REST API** | Web service communication | JSON with Base64 encoding |
 | **OAuth** | Authorization framework | Token encoding |
+
+---
 
 ## Docker Demo: File Transmission Between Containers (CMD)
 
@@ -97,10 +101,19 @@ Based on my implementation, these are the key risks:
 - **URL Encoding Exploits:** Double encoding can bypass WAF filters
 - **Chained Encoding:** Combining multiple encodings hides malicious intent
 
+---
+
 ## Mitigation Strategies Implemented
 - Context-Aware Decoding: Validate after decoding at application entry points
 - TLS Encryption: All transmissions encrypted
 - Secure API Gateway: Centralized validation of REST API payloads
+
+---
+
+## License
+This project is licensed under the MIT License - see the [root LICENSE file](../LICENSE) for details.
+
+---
 
 ## References from My Assignment
 - Cloudflare. (2025). What is HTTPS?
