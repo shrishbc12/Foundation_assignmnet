@@ -77,3 +77,12 @@ python Heuristic.py
 
 **Heuristic**
 ![Heuristic seating](Images/heuristic-output.png)
+
+
+## Performance Comparsion
+|# Students| Brute Force Checks| Heuristic Steps|
+|---------|--------------------|-----------------|
+|    4	  |         24	       |        4        |
+|   10	  |     3.6 MILLION	   |       10        |
+|   15	  |     1.3 TRILLION   |       15        |
+|   20	  |     2.4 QUINTILLION|	   20        |
