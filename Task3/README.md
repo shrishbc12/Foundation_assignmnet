@@ -41,3 +41,69 @@ task3/
 ├── join_queries.sql # JOIN operation queries
 └── set_operations.sql # UNION, INTERSECT, EXCEPT queries
 ```
+
+
+## Original Problem - Denormalized Table
+
+The original table had the following problems:
+
+| Problem | Example | Impact |
+|---------|---------|--------|
+| **Data Redundancy** | Asha's name appears twice (Music & Sports club) | Wasted storage, inconsistency risk |
+| **Update Anomaly** | Changing Music Club mentor requires updating 3 rows | Inconsistent data if one row missed |
+| **Insertion Anomaly** | Can't add Photography Club without a student | Unrealistic restriction |
+| **Deletion Anomaly** | Deleting Aman removes Coding Club info completely | Loss of club data |
+
+## Normalization Process
+
+### First Normal Form (1NF)
+**Requirement:** All attributes must be atomic (indivisible)
+
+Output file: [`output/1nf-table.txt`](Output/1nf-table.txt)
+
+### Second Normal Form (2NF)
+**Requirement:** Must be in 1NF + No partial dependencies
+
+**Solution:** Split into 3 tables
+
+Output files:
+- [`output/Student.txt`](Output/Student.txt)
+- [`output/Club.txt`](Output/Club.txt)
+- [`output/Membership.txt`](Output/Membership.txt)
+
+### Third Normal Form (3NF)
+**Requirement:** Must be in 2NF + No transitive dependencies
+
+**Solution:** Add ClubID as primary key
+
+## 🔗 Entity Relationship Diagram
+
+![ER Diagram](Images/er-diagram.png)
+
+**Relationships:**
+- **Student** ────< **Membership** >──── **Club**
+- One student can join many clubs
+- One club can have many students
+- Membership table links them with JoinDate
+
+## 💻 SQL Operations
+
+### Basic SQL Operations
+Output file: [`output/basic_sql_operation_output.txt`](Output/basic_sql_operation_output.txt)
+
+Includes:
+- SELECT * FROM Student
+- SELECT * FROM Club
+- INSERT operations
+- UPDATE operations
+- DELETE operations
+
+### JOIN Operation
+Output file: [`output/join_operation_output.txt`](Output/join_operation_output.txt)
+
+```sql
+SELECT s.StudentName, c.ClubName, m.JoinDate
+FROM Membership m
+JOIN Student s ON m.StudentID = s.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+ORDER BY s.StudentName;
