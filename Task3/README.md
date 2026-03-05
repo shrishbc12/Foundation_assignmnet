@@ -89,14 +89,14 @@ Output files:
 ## SQL Operations
 
 ### Basic SQL Operations
-Output file: [`output/basic_sql_operation_output.txt`](Output/basic_sql_operation_output.txt)
+Output file: [`Output/basic_sql_operation_output.txt`](Output/basic_sql_operation_output.txt)
 
 Includes:
 - NSERT (adding new clubs and students)
 - SELECT (viewing all records)
 
 ### JOIN Operation
-Output file: [`output/join_operation_output.txt`](Output/join_operation_output.txt)
+Output file: [`Output/join_operation_output.txt`](Output/join_operation_output.txt)
 
 ```sql
 SELECT s.StudentName, c.ClubName, m.JoinDate
@@ -107,3 +107,69 @@ ORDER BY s.StudentName, m.JoinDate;
 ```
 
 ## Set Operations with Venn Diagrams
+### 1. UNION - Students in Either Club
+#### SQL Query
+```sql
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Music Club'
+UNION 
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Sports Club';
+```
+
+#### Venn Diagram
+![venn diagram](Images/union-venn.png)
+
+#### Result
+![Result](Images/union-result.png)
+
+### 2. INTERSECT - Students in Both Clubs
+#### SQL Query
+```sql
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Music Club'
+INTERSECT
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Sports Club';
+```
+
+#### Venn Diagram
+![venn diagram](Images/intersect-venn.png)
+
+#### Result
+![Result](Images/intersect-result.png)
+
+### 3. EXCEPT - Students in One Club Only
+#### SQL Query
+```sql
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Music Club'
+EXCEPT
+SELECT s.StudentID, s.StudentName
+FROM Student s
+JOIN Membership m ON s.StudentID = m.StudentID
+JOIN Club c ON m.ClubID = c.ClubID
+WHERE c.ClubName = 'Sports Club';
+```
+
+#### Venn Diagram
+![venn diagram](Images/except-venn.png)
+
+#### Result
+![Result](Images/except-result.png)
+
