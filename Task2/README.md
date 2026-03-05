@@ -1,13 +1,13 @@
 # Task 2 – Computational Complexity Analysis (P vs NP)
 
-## 📋 Overview
+## Overview
 This repository demonstrates computational complexity concepts through a **classroom seating problem**, illustrating the difference between P and NP problems and comparing brute force vs heuristic approaches.
 
 **Problem:** Arrange students in one row such that:
 1. Friends are NOT sitting next to each other
 2. Students from the same city are NOT sitting next to each other
 
-## 📁 Repository Structure
+## Repository Structure
 ```
 task2/
 ├── README.md                 # Main documentation
@@ -25,7 +25,7 @@ task2/
 ```
 
 
-## 🧠 Understanding P vs NP
+## Understanding P vs NP
 
 ### Definitions
 
