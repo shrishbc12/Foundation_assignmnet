@@ -79,19 +79,19 @@ Open **Command Prompt (CMD)** and run:
 **Server Container Setup:**
 ```bash
 # Create network
-docker network create secure-net
+docker network create mynet
 # Commands I used to create and serve file
-docker run -it --name server-container ubuntu bash
-echo "Hello from Docker Container" > myfile.txt
+docker run -it --name srv --network mynet python:3.12-slim bash
+echo "Hello this is docker server!">myfile.txt
 python3 -m http.server 8081
 ```
 
 ### Step 2: Client Container Download:
 ```bash
 # Commands I used to download from another container
-docker run -it --name client-container ubuntu bash
+docker run -it --name client --network mynet python:3.12-slim bash
 apt-get update && apt-get install wget
-wget http://<server-ip>:8081/myfile.txt
+wget http://srv:8081/myfile.txt
 ```
 
 ## Security Risks I Identified
