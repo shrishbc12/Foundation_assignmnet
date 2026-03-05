@@ -48,7 +48,28 @@ task2/
 - For 10 students: 10! = 3,628,800 arrangements
 - For 15 students: 15! = 1.3 trillion arrangements
 
-## ⏱️ Time Complexity Analysis
+## Understanding the Problem
+| Approach | How it works | Time |
+|----------|--------------|---------|
+| **Brute Force** | Try ALL possible arrangements (n!) | O(n!) - Impossible for large n |
+| **Heuristic** | Use smart rules to place students | O(n²) - Fast even for large n|
+
+## How to Run
+### Prerequisites
+```bash
+# Python 3 required
+python --version
+```
+### Run Brute Force
+```bash
+cd Scripts
+python Brute-force.py
+```
+### Run Heuristic
+```bash
+cd Scripts
+python Heuristic.py
+```
 
 ### Factorial Growth (n!)
 
