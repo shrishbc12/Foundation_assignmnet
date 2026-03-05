@@ -80,9 +80,9 @@ python Heuristic.py
 
 
 ## Performance Comparsion
-|# Students| Brute Force Checks| Heuristic Steps|
-|---------|--------------------|-----------------|
-|    4	  |         24	       |        4        |
-|   10	  |     3.6 MILLION	   |       10        |
-|   15	  |     1.3 TRILLION   |       15        |
-|   20	  |     2.4 QUINTILLION|	   20        |
+|# Students| Brute Force Checks| Heuristic Steps | Brute force Runtime | Heuristic Runtime |
+|---------|--------------------|-----------------|---------------------|-------------------|
+|    4	  |         24	       |        4        |     3.6 seconds     |  0.1 milliseconds |
+|   10	  |     3.6 MILLION	   |       10        |     3.6 seconds     |  0.5 milliseconds |
+|   15	  |     1.3 TRILLION   |       15        |     15 days         |  0.8 milliseconds |
+|   20	  |     2.4 QUINTILLION|	   20        |     77,000 years    |   1 milliseconds  |
