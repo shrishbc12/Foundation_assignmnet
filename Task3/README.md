@@ -56,6 +56,8 @@ task3/
 ├── Basic_sql_operations.sql # Basic SQL queries
 ├── join_queries.sql # JOIN operation queries
 └── set_operations.sql # UNION, INTERSECT, EXCEPT queries
+|
+└──LICENSE
 ```
 
 ---
@@ -275,7 +277,7 @@ WHERE c.ClubName = 'Sports Club';
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
---
+---
 
 ## References
 - Alexander, S. (2024). What is a database? TechTarget.
