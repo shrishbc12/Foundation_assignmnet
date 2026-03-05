@@ -97,6 +97,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Author
 
-**Shrish Budhathhoki**  
+**Shrish Budhathoki**  
 GitHub: [@shrishbc12](https://github.com/shrishbc12)  
 Last Updated: March 2026
