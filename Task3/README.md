@@ -13,26 +13,31 @@ This repository demonstrates database normalization concepts through a **College
 ```
 task3/
 ├── README.md # Main documentation
-├── images/
-│ ├── denormalized-table.png # Figure 18 - Original denormalized table
-│ ├── 1nf-table.png # Figure 19 - First Normal Form
-│ ├── 2nf-tables.png # Figures 20-24 - Second Normal Form tables
-│ ├── 3nf-tables.png # Figures 25-29 - Third Normal Form tables
-│ ├── er-diagram.png # Figure 30 - Entity Relationship Diagram
-│ ├── student-table.png # Figure 31 - Student table output
-│ ├── club-table.png # Figure 32 - Club table output
-│ ├── join-query.png # Figure 33 - JOIN operation output
-│ ├── union-query.png # Figure 34 - UNION query
-│ ├── union-venn.png # Figure 35 - UNION Venn diagram
-│ ├── union-result.png # Figure 36 - UNION result
-│ ├── intersect-query.png # Figure 37 - INTERSECT query
-│ ├── intersect-venn.png # Figure 38 - INTERSECT Venn diagram
-│ ├── intersect-result.png # Figure 39 - INTERSECT result
-│ ├── except-query.png # Figure 40 - EXCEPT query
-│ ├── except-venn.png # Figure 41 - EXCEPT Venn diagram
-│ └── except-result.png # Figure 42 - EXCEPT result
+├── Images/
+│ ├── er-diagram.png # Entity Relationship Diagram
+│ ├── union-query.png # UNION query screenshot
+│ ├── union-venn.png # UNION Venn diagram
+│ ├── union-result.png # UNION result screenshot
+│ ├── intersect-query.png # INTERSECT query screenshot
+│ ├── intersect-venn.png # INTERSECT Venn diagram
+│ ├── intersect-result.png # INTERSECT result screenshot
+│ ├── except-query.png # EXCEPT query screenshot
+│ ├── except-venn.png # EXCEPT Venn diagram
+│ └── except-result.png # EXCEPT result screenshot
 │
-└── Scripts/
-├── normalize.sql # SQL scripts for normalization
-└── queries.sql # SQL queries (JOIN, UNION, INTERSECT, EXCEPT)
+├── Output/
+│ ├── 1nf-table.txt # 1NF table output
+│ ├── Student.txt # Student table output
+│ ├── Club.txt # Club table output
+│ ├── Membership.txt # Membership table output
+│ ├── basic_sql_operation_output.txt # Basic SQL operations output
+│ ├── join_operation_output.txt # JOIN operation output
+│ └── Set_Operations_output.txt # Set operations output
+│
+└── sql/
+├── create_tables.sql # Create database tables
+├── normalization_steps.sql # Normalization process (1NF, 2NF, 3NF)
+├── Basic_sql_operations.sql # Basic SQL queries
+├── join_queries.sql # JOIN operation queries
+└── set_operations.sql # UNION, INTERSECT, EXCEPT queries
 ```
